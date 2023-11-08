@@ -49,6 +49,13 @@ pub mod time {
     }
 }
 
+pub mod random {
+    define_api! {
+        /// Returns the current clock time.
+        pub fn ax_random() -> u128;
+    }
+}
+
 /// Memory management.
 pub mod mem {
     use core::{alloc::Layout, ptr::NonNull};

@@ -51,6 +51,10 @@
 #![feature(doc_auto_cfg)]
 #![feature(ip_in_core)]
 
+#![feature(hashmap_internals)]
+#![feature(hasher_prefixfree_extras)]
+#![feature(const_hash)]
+
 #[cfg(feature = "alloc")]
 extern crate alloc;
 
@@ -71,6 +75,8 @@ pub mod process;
 pub mod sync;
 pub mod thread;
 pub mod time;
+pub mod hashmap;
+// pub mod random;
 
 #[cfg(feature = "fs")]
 pub mod fs;
